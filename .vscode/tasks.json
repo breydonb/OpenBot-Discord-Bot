@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Typescript",
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": [],
+            "label": "npm build",
+            "detail": "uses esbuild to build project"
+        },
+        {
+            "type": "npm",
+            "script": "lint",
+            "problemMatcher": [],
+            "label": "Run Linter",
+            "detail": "npx eslint"
+        },
+        {
+            "label": "Build Project",
+            "dependsOn": [
+                "npm build",
+                "Run Linter",
+                "Build Typescript",
+                "npm install"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "install",
+            "problemMatcher": [],
+            "label": "npm install",
+            "detail": "install dependencies from package"
+        }
+    ]
+  }

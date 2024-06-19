@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "forceConsistentCasingInFileNames": true,
+      "allowJs": true,
+      "strict": true,
+      "outDir": "./dist",
+      "rootDir": "./",
+      
+    },
+    "include": ["src/**/*", "*.ts"],
+    "exclude": ["node_modules","src/events/event.base"]
+}
