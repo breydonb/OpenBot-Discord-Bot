@@ -86,9 +86,6 @@ web_modules/
 # Next.js build output
 .next
 out
-
-# Nuxt.js build / generate output
-.nuxt
 dist
 
 # Gatsby files
@@ -119,14 +116,9 @@ dist
 # TernJS port file
 .tern-port
 
-.vscode/
-
-.env
-dist
-
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
-
+.vscode
 # yarn v2
 .yarn/cache
 .yarn/unplugged
